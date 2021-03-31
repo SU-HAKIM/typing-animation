@@ -1,0 +1,173 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+/* scroll bar */
+::-webkit-scrollbar{
+    background-color: #333;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border:1px solid rgb(97, 95, 95);
+}
+::-webkit-scrollbar-track{
+    background-color: #333;
+}
+/* scroll bar */
+
+.comeA{
+    transform: translateX(0);
+}
+
+.active{
+    color:white;
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: arial black;
+}
+.head-text{
+    text-align: center;
+    z-index: 10;
+    color:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.head-text h3{
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+.head-text p{
+    font-size: 2rem;
+}
+header{
+    /* width:100%; */
+    height:100vh;
+    background: url('./images/images/tim-marshall-yEOCA6oiVqg-unsplash.jpg');
+    background-position:center;
+    background-size:cover;
+}
+.overlay{
+    /* width:100%; */
+    height:100vh;
+    background: rgba(0,0,0,.8);
+    z-index: -10;
+}
+.container{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0px 20px;
+}
+.logo h4{
+    color:#fff;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top:10px;
+}
+.grid{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu a{
+    text-decoration: none;
+    color:rgb(168, 166, 166);
+    margin:20px;
+    display:inline-block;
+}
+.menu{
+    /* padding:20px 0px; */
+    text-align:center;
+
+}
+.menu-top{
+    position:sticky;
+    top:0;
+    background: #000;
+    z-index: 100;
+}
+@media screen and (max-width:610px){
+    .head-text{
+        display:none;
+    }
+   .grid{
+       flex-direction: column;
+       justify-content: center;
+       align-items: flex-start;
+        position:sticky;
+        top:0;
+   }
+   .menu{
+       display:flex;
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+       padding:0px 10px;
+       background: rgb(0, 0, 0);
+       margin:0px;
+       width:100%;
+       display:none;
+       transform: all .5s linear;
+   }
+   .menu a{
+       margin:10px 5px;
+       color:rgb(255, 255, 255);
+   }
+   .container{
+       padding:0px;
+   }
+   .logo{
+       padding:5px 10px;
+      
+   }
+   .logo h4{
+        color:rgb(255, 255, 255);
+   }
+   .icon{
+       background: rgb(255, 255, 255);
+       width:20px;
+       height:2px;
+       border-radius: 1000px;
+       position: relative;
+       cursor:pointer;
+   }
+   .icon::before{
+       content:'';
+       position: absolute;
+       background: rgb(255, 255, 255);
+       width:20px;
+       height:2px;
+       top:-6px;
+   }
+   .icon::after{
+       content:'';
+       position: absolute;
+       background: rgb(255, 255, 255);
+       width:20px;
+       height:2px;
+       top:6px;
+   }
+   .first-section{
+       border-bottom: 2px solid #333;
+       background: rgb(0, 0, 0);
+       color:black;
+       width:100%;
+       display:flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+       padding-right:10px;
+   }
+
+}
+.open{
+    display:flex;
+}
